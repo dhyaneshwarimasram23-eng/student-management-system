@@ -1,4 +1,11 @@
 function login(user) {
+    if (user.type === "student") {
+        return "Student Panel";
+    }
+    return "Unauthorized";
+}
+
+module.exports = login;function login(user) {
     if (user.role === "student") {
         return "Welcome Student";
     }
